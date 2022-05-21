@@ -15,13 +15,42 @@
    <header>
        <b class="logo">Jirapat Sarakan</b>
        <nav>
-           <ul class="nav__links">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Project</a></li>
-                <li><a href="#">About</a></li>
+           <ul id="aa" class="nav__links">
+               <li><a id="Nav_Home" href="#">Home</a></li>
+               <li><a id="Nav_Project" href="#">Project</a></li>
+               <li><a id="Nav_About" href="#">About</a></li>
            </ul>
        </nav>
-       <a href="#"><button class="btn__contact">Contect</button></a>
+       <a href="#"><button id="Nav_Contact" class="btn__contact">Contact</button></a>
+       <button
+            class="theme-toggle" 
+            id="theme-toggle" 
+            title="Toggles light & dark" 
+            aria-label="auto" 
+            aria-live="polite"
+            onclick="toggle_dark_mode()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun">
+                <circle id="sun" cx="12" cy="12" r="6" fill="#24252A"></circle>
+                <g class="sun-beams" id="sun-beams" stroke="#24252A" >
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36">
+                    </line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </g>
+                <g class="moon" id="moon">
+                    <mask id="moon-mask">
+                        <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                        <circle id="circle-moon" cx="18" cy="9" r="7" fill="black" />
+                      </mask>
+                    <circle id="sun" cx="12" cy="12" r="7" mask="url(#moon-mask)" fill="#edf0f1"></circle>
+                </g>
+            </svg>
+        </button>
    </header>
+   <script src="./app.js"></script>
 </body>
 </html>

@@ -3,21 +3,74 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #24252A
-
-    ;
+    /* background-color: #24252A */
 }
+:root{
+  --dark-color : #24252A;
+  --light-color : #edf0f1;
+}
+.dark-mode {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    transition: all 0.7s ease 0s;
+}
+.dark-mode-nav{
+    color: var(--light-color);
+    transition: all 0.7s ease 0s;
+}
+svg{
+  cursor: pointer;
+}
+
+.moon{
+  opacity: 0;
+}
+
+.fill-light{
+  opacity: 1;
+}
+.fill-dark{
+  opacity: 0;
+}
+
+.theme-toggle {
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding-left: 10px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+  transition: all 0.5 ease 0s;
+
+}
+
+
+
+
 body{
     font-family: 'Source Code Pro', monospace;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    transition: all 0.7s ease 0s;
+
 }
 
-li, a, button{
+li, a{
     font-family: 'Source Code Pro', monospace;
     font-weight: 500;
     font-size: 16px;
-    color:  #edf0f1;
+    color:  var(--dark-color);
     text-decoration: none;
 }
+
 header{
     display: flex;
     justify-content: flex-end;
@@ -25,7 +78,7 @@ header{
     padding: 30px 10px;
 }
 .logo{
-    color: #edf0f1;
+    /* color: #24252A; */
     cursor: pointer;
     margin-right: auto;
 }
@@ -48,7 +101,7 @@ header{
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    transition: all 0.7s ease 0s;
 
 }
 .btn__contact:hover{
