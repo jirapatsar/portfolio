@@ -103,6 +103,7 @@ header{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.7s ease 0s;
+    color: #edf0f1;
 
 }
 .btn__contact:hover{
